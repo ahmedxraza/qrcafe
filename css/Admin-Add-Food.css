@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend Deca", serif;
+}
+
+.container {
+  width: 95%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.add {
+  text-align: center;
+}
+
+.add .Head {
+  font-size: 3.6rem;
+  margin-bottom: 35px;
+}
+
+.container2 {
+  margin: 0 auto;
+  border: 2px solid;
+  background-color: #f0cae9;
+  padding: 20px;
+  height: auto;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 1);
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.4rem;
+  border: 2px solid #000;
+  outline: none;
+  font-family: "Lexend Deca", serif;
+
+  /* border-radius: 5px; */
+}
+
+/* ####################################### IMAGE CSS #################################### */
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 200px; /* Matches text boxes */
+  height: 200px;
+  border: 2px dashed #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Hidden by default */
+}
+
+/* Hide Default File Input */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom Upload Button */
+.upload-btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 500px; /* Matches text boxes */
+  padding: 10px;
+  background-color: #a4d7e7;
+  color: black;
+  font-family: "Lexend Deca", serif;
+  font-weight: 400; /* Lighter font weight */
+  font-size: 1.6rem;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.upload-btn:hover {
+  background-color: #75c5dd;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+.upload-btn:active {
+  background-color: #a4d7e7;
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* File Name Display */
+#fileName {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* ####################################### DDL CSS #################################### */
+#foodCategory {
+  border: 2px solid black;
+  /* cursor: pointer; */
+}
+/* ####################################### ADD BUTTON CSS #################################### */
+
+.ADDF {
+  margin-top: 15px;
+  padding: 10px;
+  font-family: "Lexend Deca", serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+  background-color: #96ec74;
+  /* border: none; */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ADDF:hover {
+  background-color: #5fe02d;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+.ADDF:active {
+  background-color: #96ec74;
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}

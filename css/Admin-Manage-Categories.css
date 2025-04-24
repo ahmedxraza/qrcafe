@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend Deca", serif;
+}
+
+.container {
+  width: 95%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.add {
+  text-align: center;
+}
+
+.add .Head {
+  font-size: 3.6rem;
+  margin-bottom: 35px;
+}
+
+.add .add-cat {
+  width: 100%;
+  height: 57px;
+  font-family: "Lexend Deca", serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  border: 2px solid black;
+  background-color: #96ec74;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  margin-bottom: 35px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.add .add-cat:hover {
+  background-color: #5fe02d;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.add .add-cat:active {
+  background-color: #96ec74;
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+hr {
+  border: 1px solid black;
+  margin-bottom: 35px;
+}
+
+/* ######################################## TABLE ####################################### */
+table {
+  border: 1px solid red;
+  width: 100%;
+  text-align: center;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #8bd9f7;
+}
+
+th:nth-child(1) {
+  width: 385px;
+}
+th:nth-child(2) {
+  width: 600px;
+}
+th:nth-child(3) {
+  width: 400px;
+}
+
+th,
+tr,
+td {
+  font-size: 2rem;
+  font-weight: 500;
+  height: 66px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+tr:nth-child(odd) {
+  background-color: #d9d9d9;
+}
+
+/* ######################################## INSERT & UPDATE ####################################### */
+
+td:nth-child(3) {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+  height: 100%;
+}
+
+td:nth-child(3) .btn {
+  margin: 0 10px; /* Adds space between buttons */
+  margin: 10px;
+}
+
+.btn {
+  width: 145px;
+  height: 35px;
+  border: 1px solid black;
+  font-family: "Lexend Deca", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  transition: 0.1s;
+}
+
+.btn1 {
+  background-color: #efe360;
+}
+
+.btn1:hover {
+  background-color: #e3d536;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.btn1:active {
+  background-color: #efe360;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.btn2 {
+  background-color: #fc9486;
+}
+
+.btn2:hover {
+  background-color: #f87463;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.btn2:active {
+  background-color: #fc9486;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.btn1,
+.btn2 {
+  cursor: pointer; /* Add pointer cursor */
+}
+
+/* ######################################## MODALS ####################################### */
+dialog::backdrop {
+  background-color: #00000063;
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  /* padding-top: 50px; */
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  background: #dae4f6;
+  max-width: 70%;
+  width: 390px;
+  height: 320px;
+  text-align: center;
+}
+dialog .wrapper {
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+dialog h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-decoration: underline;
+}
+
+dialog form input {
+  width: 90%;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
+  outline: none;
+  font-family: "Lexend Deca", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+dialog #addCategoryForm input[type="submit"] {
+  padding: 0;
+  font-family: "Lexend Deca", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: #96ec74;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  transition: 0.2s;
+}
+
+dialog #addCategoryForm input[type="submit"]:hover {
+  background-color: #5fe02d;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+dialog #addCategoryForm input[type="submit"]:active {
+  background-color: #96ec74;
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+#nameError {
+  margin-top: 10px;
+}
+
+dialog label[for="categoryName"] {
+  font-size: 1.8rem;
+}
+dialog label[for="UpdatecategoryName"] {
+  font-size: 1.8rem;
+}
+
+.dlt-p {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+#Update-Category #UpdateCategoryForm input[type="submit"] {
+  background-color: #efe360;
+  transition: 0.2s;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+}
+
+#Update-Category #UpdateCategoryForm input[type="submit"]:hover {
+  background-color: #feee3c;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+#Update-Category #UpdateCategoryForm input[type="submit"]:active {
+  background-color: #efe360;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+#Delete-Category .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add gap between buttons */
+}
+
+#Delete-Category .buttons button {
+  padding: 0;
+  font-family: "Lexend Deca", serif;
+  width: 140px;
+  height: 40px; /* Increased height from 30px to 50px */
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: #96ec74;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  transition: 0.2s;
+  margin: 0; /* Remove margin to prevent misalignment */
+}
+
+#Delete-Category .buttons button:nth-child(1):hover {
+  background-color: #5fe02d;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+#Delete-Category .buttons button:nth-child(1):active {
+  background-color: #96ec74;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+#Delete-Category .buttons button:nth-child(2) {
+  background-color: #fc9486;
+}
+
+#Delete-Category .buttons button:nth-child(2):hover {
+  background-color: #f37463;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+#Delete-Category .buttons button:nth-child(2):active {
+  background-color: #fc9486;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}

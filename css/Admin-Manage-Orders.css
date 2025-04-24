@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* background-color: #d2d2d2; */
+  background-color: #f1c5ea;
+  font-family: "Lexend Deca", serif;
+}
+
+/* ######################################## Upper  ############################################ */
+
+.upper {
+  margin: auto;
+  margin-top: 20px;
+  /* border: 3px solid red; */
+  width: 90%;
+  /* height: 400px; */
+}
+
+.head {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* Space between label and select */
+  margin-bottom: 15px; /* Space between form rows */
+  width: 100%;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Select styling */
+select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1.6rem;
+  font-family: "Lexend Deca", sans-serif;
+  border: 1.5px solid #000000;
+  border-radius: 0px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  transition: 0.3s ease;
+}
+
+/* Hover and Focus effect */
+select:hover {
+  background-color: #e1e1e1;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+select:focus {
+  background-color: #e1e1e1;
+  outline: none;
+}
+
+select:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* Make sure form itself adjusts properly */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  gap: 15px; /* Space between all rows in the form */
+}
+
+.search {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 100%;
+  height: 38px;
+  font-family: "Lexend Deca";
+  font-size: 2rem;
+  font-weight: 500;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+  background-color: #66e966;
+  transition: 0.2s ease-in-out;
+}
+
+.search:hover {
+  background-color: #51ff51;
+}
+
+.search:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+hr {
+  border: 1.5px solid;
+  margin: 10px 0px;
+}
+
+/* ########################## LOWER ###################################### */
+
+.lower {
+  width: 95%;
+  margin: auto;
+  /* border: 1px solid; */
+  /* height: 100px; */
+}
+
+.order-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.order {
+  background-color: #eeeeee;
+  margin-bottom: 50px;
+  border: 3px solid black;
+  /* border: 2px solid red; */
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 1);
+  width: 100%;
+}
+
+.o-heading p {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.o-heading {
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #eeeeee;
+  /* margin-bottom: 10px; */
+}
+
+/* Left side (Name + Date) */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+/* Name & Date Styling */
+
+.o-heading p.odate {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+/* Center (Tors) */
+.otors {
+  text-align: center;
+  flex-grow: 1;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Right Side (Order ID) */
+.oid {
+  text-align: right;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* ########################## Order Table ###################################### */
+.otable {
+  margin: auto;
+  width: 100%;
+  /* border: 2px solid blue; */
+}
+
+.order-table {
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+  font-family: "Lexend Deca", sans-serif;
+  /* box-shadow: 3px 3px 0 black; */
+  table-layout: fixed;
+}
+
+.order-table th,
+.order-table td {
+  border: 1.5px solid black;
+  padding: 12px 2px;
+  text-align: center;
+  font-size: 1.4rem;
+  word-wrap: break-word;
+}
+
+.order-table th {
+  background-color: rgb(100, 188, 225);
+  width: 25%;
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.order-table tbody tr:nth-child(even) {
+  background-color: #c5edff;
+}
+
+.order-table tbody tr:nth-child(odd) {
+  background-color: #dff2fa;
+}
+
+/* ########################## Summary Table ###################################### */
+
+/* Container to align table to right */
+.summary-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* margin-top: 1px; */
+}
+
+/* Summary Table Styling */
+.summary-table {
+  width: 100%;
+  max-width: 50.1%;
+  font-family: "Lexend Deca", sans-serif;
+  border-collapse: collapse;
+  /* box-shadow: 3px 3px 0 black; */
+}
+
+.summary-table td {
+  width: 50%;
+  padding: 12px;
+  font-size: 1.6rem;
+  border: 1.5px solid black;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Left column (Labels like Subtotal, GST) */
+.summary-table .sub-total,
+.summary-table .gst {
+  text-align: left;
+  font-weight: bold;
+  background-color: #fad1c0;
+}
+
+/* Highlight Grand Total Row */
+.summary-table .grand-total {
+  background-color: #f59c79;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+/* ########################## Bottom ###################################### */
+.obottom {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  gap: 30px;
+}
+
+/* Optional: Style for buttons if you want */
+.obottom button {
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  font-family: "Lexend Deca", sans-serif;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0 black;
+}
+
+.obottom button:hover {
+  box-shadow: 3px 3px 0 black;
+}
+
+.obottom .b1 {
+  padding: 6px 10px;
+  background-color: #63d8ff;
+}
+
+.obottom .b2 {
+  padding: 6px 10px;
+  background-color: #63ff63;
+}
+
+.obottom .b3 {
+  padding: 6px 10px;
+  background-color: #ff7663;
+}
+.obottom .b3:hover {
+  background-color: #f98d7f;
+}
+.obottom .b1:active,
+.obottom .b2:active,
+.obottom .b3:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+.obottom .b3:active {
+  background-color: #ff7663;
+}
+
+/* ################## DIALOGES #################### */
+.dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  z-index: 200;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid black;
+}
+
+.dialog h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.dialog button {
+  margin: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 199;
+}
+
+/* Order status */
+.bhnc {
+  border: 1px solid black;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+  transition: 0.3s;
+}
+
+.bhnc:hover {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+.bhnc:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.greenbtn {
+  background-color: #7fff7f;
+}
+
+.greenbtn:hover {
+  background-color: #00ff00;
+}
+.redbtn {
+  background-color: #ff8686;
+}
+.redbtn:hover {
+  background-color: #fa3838;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+  label {
+    font-size: 1.4rem;
+  }
+  select {
+    font-size: 1.4rem;
+  }
+
+  .o-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .tors {
+    text-align: left;
+  }
+}

@@ -1,0 +1,700 @@
+/* Import the retro-style font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+/* Body Background */
+body {
+  background-color: #faffe2;
+  font-family: "Press Start 2P", Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #faffe2;
+  box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 4rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Cart Icon (Hidden by default, visible on small screens) */
+.cart-icon {
+  display: none;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #faffe2;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: red;
+  color: white;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ##################################################    Heading Image    ################################################################ */
+.heading {
+  margin-top: 100px;
+  margin-bottom: 3rem;
+  height: 60vh;
+  width: 90%;
+  max-width: 1400px;
+  box-shadow: 5px 5px 0 rgb(255, 0, 0);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.heading-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Text */
+.overlay-text {
+  font-family: "Lexend Deca";
+  position: absolute;
+  top: 10px; /* Adjust this value for vertical positioning */
+  left: 10px; /* Adjust this value for horizontal positioning */
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-top: 30px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+/* ##################################################    Categories CSS    ############################################################### */
+
+.categories {
+  /* border: 5px solid rgb(7, 0, 82); */
+
+  margin-top: 5rem;
+  /* margin-left: 3%;
+    margin-right: 3%; */
+  width: 90%;
+  max-width: 1400px;
+  /* border: 2px solid blue; */
+  margin: 0 auto;
+}
+
+.categoriesHeading {
+  /* border: 5px solid green; */
+  font-size: 1rem;
+}
+
+.categoryContainer {
+  /* border: 5px solid rgb(255, 0, 0); */
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Makes the buttons wrap if they don't fit */
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-button {
+  padding: 12px 24px;
+  background-color: red;
+  margin-bottom: 10px;
+
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; /* Text color */
+  box-shadow: 2.5px 2.5px 0 rgb(255, 0, 0);
+  background-color: #ffd034; /* Button background */
+  border: 2px solid #000000; /* Button border */
+  border-radius: 30px; /* Fully rounded corners */
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-button:hover {
+  background-color: #e39133; /* Slightly darker shade */
+  border-color: #000000;
+}
+
+.category-button:focus {
+  background-color: #000000; /* Active button color */
+  color: #ffce34; /* Text color for active button */
+  border-color: #000000; /* Border color for active button */
+}
+
+.category-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.divider {
+  /* margin-bottom: 1000px; */
+  margin-top: 10px;
+  border: 2px solid black;
+  color: black;
+}
+
+/* ##################################################    food Container CSS    ############################################################### */
+
+.outer {
+  /* margin-top: 3rem; */
+  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+.food-container {
+  /* font-family: "Lexend Deca"; */
+  /* height: 600px; */
+  margin-top: 3rem;
+  margin-bottom: 2rem; /* or whatever spacing looks good */
+  /* border: 3px solid red; */
+  /* margin: 0 auto; */
+}
+
+#food {
+  font-size: 1.5rem;
+}
+
+.food-item {
+  padding-bottom: 20px;
+  /* border: 3px solid red; */
+  border-bottom: 1px solid rgb(81, 81, 81);
+}
+
+.divider-2 {
+  margin-top: 10px;
+  border: 3px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  width: 120px;
+}
+
+.food-itemcontainer {
+  max-height: 350px;
+  height: 50%;
+  margin-top: 20px;
+  border: 3px solid red;
+}
+
+/* ############# */
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* margin-bottom: 30px; */
+  margin-top: 30px;
+  /* padding: 15px; */
+  /* border-bottom: 1px solid #eee; */
+}
+
+.food-item:last-child {
+  border-bottom: none;
+}
+
+.food-details {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.food-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  font-weight: bold;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+.food-description {
+  /* max-width: 30%;
+    width: 500px; */
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.food-image-btn-container {
+  flex: 1;
+  text-align: right;
+}
+
+.food-image {
+  max-width: 170px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+  border: 2.5px solid black;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-image:hover {
+  transform: scale(1.1);
+}
+
+.add-to-cart {
+  margin-top: 10px;
+}
+
+.add-to-cart button {
+  padding: 15px 21px;
+  background-color: rgb(46, 255, 95);
+  color: black;
+  font-size: 14px;
+  /* font-weight: bold; */
+  font-family: "Press Start 2P", cursive;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  /* text-transform: uppercase; */
+  transition: 0.2s;
+}
+
+.add-to-cart button:hover {
+  background-color: rgb(112, 255, 112);
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+.add-to-cart button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+}
+
+hr {
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+}
+
+/* ##################################################    Floating cart    ################################################################ */
+
+.cart-iconn {
+  position: fixed;
+  bottom: -80px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff81f;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  transition: bottom 0.5s ease-in-out, box-shadow 0.1s ease-in-out,
+    background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.cart-iconn:hover {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  background-color: #fff94a;
+}
+
+.cart-iconn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.cart-iconn img {
+  width: 30px;
+  height: 30px;
+}
+
+.cart-visible {
+  bottom: 20px !important;
+}
+
+/* ##################################################    Footer    ################################################################ */
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  padding: 60px 0px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.tagline {
+  color: #ffffff;
+  font-size: 24px; /* Adjust font size */
+  margin-bottom: 0px;
+}
+
+.footer p {
+  color: #ffffff;
+  font-size: 18px; /* Adjust font size */
+  font-family: "Lexend Deca";
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.footer p:last-child {
+  font-weight: 200;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* ##################################################    MEDIA QUERIES    ################################################################ */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logotext {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 3rem;
+  }
+
+  .nav-links a {
+    font-size: 0.6rem;
+  }
+
+  /* HEADING Overlay Text */
+  .heading {
+    margin-top: 70px;
+    margin-bottom: 0rem;
+  }
+
+  .overlay-text {
+    font-size: 2rem;
+  }
+
+  /* CATEGORIES */
+  .categories {
+    margin-top: 20px;
+  }
+
+  .categoriesHeading {
+    font-size: 0.7rem;
+  }
+
+  .categoryContainer {
+    margin-top: 15px;
+    gap: 5px;
+  }
+
+  .category-button {
+    padding: 6px 12px;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-right: auto;
+  }
+
+  .logotext {
+    font-size: 1.5rem;
+  }
+
+  /* Hide the normal nav-links on small screens */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show Hamburger */
+  .hamburger {
+    display: block;
+    margin-right: 10px;
+  }
+
+  /* Hide "MY CART" (text link) on small screens */
+  .cart-link {
+    display: none;
+  }
+
+  /* Show Cart Icon */
+  .cart-icon {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .cart-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Sidebar opens */
+  .sidebar {
+    display: flex;
+  }
+
+  /* Overlay Text */
+  .heading {
+    height: 50vw; /* Adjust the height to 40% of viewport height for smaller screens */
+  }
+  .overlay-text {
+    font-size: 1.6rem;
+  }
+
+  /* ############### FOOD ITEMS ############ */
+  #food {
+    font-size: 20px;
+  }
+  .food-title {
+    font-size: 13px;
+  }
+  .divider-2 {
+    width: 100px;
+  }
+
+  .food-price {
+    font-size: 15px;
+  }
+  .food-description {
+    font-size: 10px;
+  }
+
+  .food-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .add-to-cart button {
+    padding: 10px 9px;
+    font-size: 9px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }
+  .add-to-cart button:hover {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    /* background-color: red; */
+  }
+
+  .add-to-cart button:active {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    transform: translate(2px, 2px);
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+    margin-right: auto;
+  }
+
+  .logotext {
+    font-size: 0.9rem;
+  }
+
+  .hamburger {
+    font-size: 1.4rem;
+  }
+
+  .nav-links a {
+    font-size: 0.4rem; /* Smaller font size for the links in the slider */
+  }
+
+  .cart-icon img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  /* CATEGORIES */
+  .categories {
+    margin-top: 20px;
+  }
+
+  .categoriesHeading {
+    font-size: 0.5rem;
+  }
+
+  .categoryContainer {
+    margin-top: 10px;
+    gap: 5px;
+  }
+
+  .category-button {
+    padding: 4px 6px;
+    font-size: 7px;
+    margin-bottom: 5px;
+  }
+
+  /* Overlay Text */
+  .overlay-text {
+    font-size: 1.3rem;
+  }
+
+  /* ############### FOOD ITEMS ############ */
+  .food-item {
+    margin-top: 10px;
+  }
+
+  #food {
+    font-size: 12px;
+  }
+  .divider-2 {
+    width: 60px;
+    border: 2px solid red;
+  }
+  .food-title {
+    font-size: 10px;
+  }
+
+  .food-price {
+    font-size: 13px;
+  }
+  .food-description {
+    font-size: 8px;
+  }
+
+  .food-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .add-to-cart button {
+    padding: 10px 5px;
+    font-size: 7.5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  }
+  .add-to-cart button:hover {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    /* background-color: red; */
+  }
+
+  .add-to-cart button:active {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    transform: translate(2px, 2px);
+  }
+
+  /* footer */
+  .tagline {
+    font-size: 10px; /* Adjust font size */
+  }
+
+  .footer p {
+    font-size: 10px; /* Adjust font size */
+    margin-top: 15px;
+  }
+
+  .footer p:last-child {
+    font-weight: 200;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}

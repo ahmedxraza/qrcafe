@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend Deca", serif;
+}
+
+.container {
+  width: 95%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.add {
+  text-align: center;
+}
+
+.add .Head {
+  font-size: 3.6rem;
+  margin-bottom: 35px;
+}
+
+.add #add-food {
+  display: inline-block;
+  width: 100%;
+  height: 57px;
+  /* font-family: "Lexend Deca", serif; */
+  line-height: 57px;
+  color: black;
+  font-size: 2.4rem;
+  font-weight: 500;
+  border: 2px solid black;
+  background-color: #96ec74;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  margin-bottom: 35px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.add #add-food:hover {
+  background-color: #5fe02d;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.add #add-food:active {
+  background-color: #96ec74;
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+hr {
+  border: 1px solid black;
+  margin-bottom: 35px;
+}
+
+/* ######################################## TABLE ####################################### */
+table {
+  border: 1px solid red;
+  width: 100%;
+  text-align: center;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #8bd9f7;
+}
+
+th:nth-child(1) {
+  width: 385px;
+}
+th:nth-child(2) {
+  width: 600px;
+}
+th:nth-child(3) {
+  width: 400px;
+}
+th:nth-child(4) {
+  width: 400px;
+}
+th:nth-child(5) {
+  width: 400px;
+}
+th:nth-child(6) {
+  width: 400px;
+}
+th:nth-child(7) {
+  width: 400px;
+}
+
+th,
+tr,
+td {
+  font-size: 2rem;
+  font-weight: 500;
+  height: 66px;
+}
+
+td {
+  height: 128px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+tr:nth-child(odd) {
+  background-color: #d9d9d9;
+}
+
+td:nth-child(4) {
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+
+/* ######################################## INSERT & UPDATE ####################################### */
+
+td:nth-child(7) {
+  text-align: center; /* Center horizontally */
+  vertical-align: middle; /* Center vertically */
+  height: 100%;
+}
+
+td:nth-child(7) .btn {
+  margin: 0 10px; /* Adds space between buttons */
+  margin: 10px;
+}
+
+.btn {
+  display: inline-flex; /* Ensures buttons behave like inline elements */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+  width: 145px;
+  height: 35px;
+  border: 1px solid black;
+  font-family: "Lexend Deca", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#update {
+  background-color: #efe360;
+}
+
+#update:hover {
+  background-color: #e3d536;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+#update:active {
+  background-color: #efe360;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.delete {
+  background-color: #fc9486;
+}
+
+.delete:hover {
+  background-color: #f87463;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.delete:active {
+  background-color: #fc9486;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* ######################################## IMAGE IN TABLE ####################################### */
+
+.food-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+  border-radius: 0px; /* Optional: Adds rounded corners */
+  box-shadow: 0px 0px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+/* ######################################## Delete Modal ####################################### */
+/* Modal Styling */
+dialog {
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 0px;
+  background-color: #dae4f6;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Dialog open effect */
+dialog[open] {
+  display: block;
+  opacity: 1;
+}
+
+/* Wrapper inside the dialog */
+.wrapper {
+  text-align: center;
+}
+
+/* Modal Header */
+.wrapper h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Description text */
+.dlt-p {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button container for modal */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Button styles */
+button {
+  background-color: #fc9486;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0px;
+  font-size: 1.8rem;
+  border: 1px solid black;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+  font-family: "Lexend Deca", serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #f37463;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+button[type="button"] {
+  background-color: #96ec74;
+}
+
+button[type="button"]:hover {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+  background-color: #5fe02d;
+}
+
+button[type="button"]:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* Close the modal background */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}

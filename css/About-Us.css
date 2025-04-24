@@ -1,0 +1,244 @@
+/* Import the retro-style font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e5efff;
+  font-family: "Lexend Deca", serif;
+}
+
+/* #################### Back ################### */
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
+.back-arrow img {
+  width: 100%; /* Make the image responsive within the container */
+  height: auto;
+  cursor: pointer;
+}
+
+.back-arrow img {
+  width: 100%; /* Make the image responsive within the container */
+  height: auto;
+  cursor: pointer;
+}
+
+/* Container 1 */
+.container1 {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 1170px;
+  /* height: 100px; */
+  max-width: 90%;
+  /* border: 2px solid black; */
+}
+
+h1 {
+  font-family: "Press Start 2P";
+  font-size: 4rem;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 50px;
+}
+
+.aboutus-p {
+  background-color: #b9375e;
+  color: #ffe0f9;
+}
+
+.aboutus-p,
+.vision-p {
+  width: 100%;
+  /* height: 441px; */
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 #000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding: 40px 55px;
+}
+
+hr {
+  margin: 48px 0px;
+  border: 1px solid black;
+}
+
+.vision-p {
+  background-color: rgba(221, 119, 204, 0.63);
+  color: #3b2e56;
+}
+
+/* Container 2 */
+.container2 {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1255px;
+  /* border: 2px solid black; */
+  text-align: center;
+  padding: 0;
+}
+
+/* Section Container */
+.section-container {
+  display: flex;
+  justify-content: space-between; /* Equal spacing between sections */
+  align-items: center;
+  flex-wrap: wrap; /* Enables responsiveness */
+  padding: 0;
+  gap: 20px; /* Adds equal gap between sections */
+}
+
+/* Section Styles */
+section {
+  width: 285px; /* Fixed width */
+  height: 267px; /* Fixed height */
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: flex-start;
+  padding: 15px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.section1 {
+  background-color: #feedde;
+  color: #5a3e36;
+}
+
+.section2 {
+  background-color: #fdbe85;
+  color: #822e2e;
+}
+
+.section3 {
+  background-color: #fd8d3c;
+  color: #5a3e36;
+}
+
+.section4 {
+  background-color: #d94701;
+  color: #ffeedd;
+}
+
+/* Title Styling */
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Text Styling */
+.sp {
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-right: 5px;
+}
+
+.choose {
+  margin: 0 auto;
+  width: 80%;
+  /* height: 452px; */
+  border: 2px solid black;
+  background-color: #7bedad;
+  box-shadow: 5px 5px 0 #000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding: 40px 55px;
+}
+
+.heart {
+  margin-top: 50px;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 190px;
+  padding: 60px 0px;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.tagline {
+  color: #ffffff;
+  font-size: 2.4rem; /* Adjust font size */
+  margin-bottom: 0px;
+}
+
+.footer p {
+  color: #ffffff;
+  font-size: 18px; /* Adjust font size */
+  font-family: "Lexend Deca";
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.footer p:last-child {
+  font-weight: 200;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1268px) {
+  .section-container {
+    justify-content: center;
+    gap: 20px; /* Moderate gap between sections */
+  }
+}
+
+@media (max-width: 900px) {
+  .section-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Keep a small gap instead of touching */
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus-p,
+  .vision-p,
+  .choose {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+}

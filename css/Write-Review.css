@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #faffe2;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Heading */
+.H-Q {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  margin: 20px 0;
+  text-decoration: underline;
+}
+
+/* Form Group - Centering Everything */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1300px; /* Controls max width of form */
+  margin: 0 auto;
+}
+
+/* Label */
+label {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Textarea - Wider */
+textarea {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem;
+  width: 100%; /* Take full width of parent */
+  max-width: 1200px; /* Big textarea */
+  height: 250px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  padding: 10px;
+  resize: none;
+  background-color: #ffffff;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:hover,
+textarea:focus {
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 1);
+}
+
+/* Error Message */
+.err {
+  font-size: 1.6rem;
+  color: rgb(197, 0, 0);
+  margin: 5px 0;
+  display: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  width: 200px;
+  height: 50px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2rem;
+  background-color: #90ee90;
+  color: #000;
+  border: 2px solid #000;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #6de86d;
+}
+
+input[type="submit"]:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* Back Link */
+.back {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: purple;
+  margin-top: 15px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 10px auto;
+  width: 90%;
+  border: 1.5px solid black;
+}
+
+h2.H-Q {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+/* Reviews Grid */
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Single Review Box */
+.review {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+.review:hover {
+  background-color: #e7e7e7;
+}
+
+/* Review Text & Details */
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p.time {
+  font-size: 1.4rem;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+p.review-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.nor {
+  margin: auto;
+  font-size: 2rem;
+}
+
+/* #################### Back ################### */
+.back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
+.back-arrow img {
+  width: 100%; /* Make the image responsive within the container */
+  height: auto;
+  cursor: pointer;
+}
+
+.back-arrow img {
+  width: 100%; /* Make the image responsive within the container */
+  height: auto;
+  cursor: pointer;
+}

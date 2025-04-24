@@ -1,0 +1,201 @@
+/* Import the retro-style font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base font size */
+html {
+  font-size: 62.5%;
+}
+
+/* Body styling */
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #faffe2;
+}
+
+/* Heading Styles */
+.H-Q {
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 3rem;
+  margin: 20px 25px;
+  text-decoration: underline;
+}
+
+/* Section Headings */
+.H-1,
+.H-2,
+.H-3,
+.H-4,
+.H-5 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Form Container */
+.user-info {
+  border: 3px solid #000;
+  border-radius: 1px;
+  box-shadow: 9px 9px 0 rgba(0, 0, 0, 1);
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #fbe5ff;
+}
+
+/* Custom Styling for Radio Buttons */
+input[type="radio"] {
+  appearance: none;
+  width: 15px; /* Increase outer circle size */
+  height: 15px;
+  border: 1px solid black; /* Outer border */
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+}
+
+/* Style when radio button is checked */
+input[type="radio"]:checked {
+  background-color: white; /* Keep background white */
+  border: 2px solid black; /* Outer border */
+}
+
+/* Inner Dot */
+input[type="radio"]::before {
+  content: "";
+  width: 7px; /* Reduce inner dot size */
+  height: 7px;
+  background-color: black; /* Dot color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Show inner dot when checked */
+input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Lables */
+.lbl1,
+.lbl2 {
+  font-size: 1.5rem;
+  position: relative;
+  top: -2px;
+  margin-left: 4px;
+}
+
+/* Input and Select Box Styling */
+.ddl,
+.ttbx,
+.Continue {
+  font-family: "Lexend Deca", sans-serif;
+  width: 250px;
+  /* max-width: 100%; */
+  display: flex;
+  align-items: center;
+  height: 32px;
+  border-radius: 1px;
+  transition: 0.3s;
+  outline: none;
+  border: 2px solid black;
+  background-color: #fbe5ff;
+}
+
+/* Mobile Input */
+.ttbx {
+  border-style: none;
+  border: 2px solid #000;
+  margin-bottom: 18px;
+  padding-left: 5px;
+}
+
+/* Continue Button */
+.Continue {
+  border: 2px solid #000;
+  background-color: lightgreen;
+  color: rgb(0, 31, 0);
+  font-size: 1.8rem;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  margin-top: 10px;
+  transition: 0.2s;
+  width: 100%;
+  max-width: 286px;
+}
+
+/* Hover Effects */
+.ddl:hover,
+.ttbx:hover {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  /* cursor: pointer; */
+}
+
+.Continue:hover {
+  background-color: #ff3d3d;
+  color: white;
+  cursor: pointer;
+}
+
+/* Focus Effects */
+.ddl:focus,
+.ttbx:focus {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+}
+
+/* Active Effects */
+.ddl:active,
+.ttbx:active,
+.Continue:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* Label Styling */
+label {
+  font-size: 1.5rem;
+}
+
+#EMAIL {
+  margin-bottom: 10px;
+}
+
+.error1,
+.error2,
+.error3,
+.error4,
+.error5 {
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  display: none;
+}

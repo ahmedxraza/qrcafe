@@ -1,0 +1,122 @@
+.hd {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+}
+
+.welcome {
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  max-width: 90%;
+  width: 507px;
+  padding: 20px 0px;
+  background: #ffffff;
+  margin-bottom: 50px;
+}
+
+.wh {
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+.name {
+  font-weight: 600;
+  color: #229f00;
+}
+
+.containerr {
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  margin: auto;
+  width: 90%;
+  background-color: #cacaca;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  gap: 20px;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 330px; /* Fixed width */
+  height: 130px; /* Fixed height */
+  background-color: #fff;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 1);
+  padding: 15px;
+  gap: 10px;
+}
+
+.stat-box img.stat-icon {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.stat-number {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.stat-label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Different Colors for each box */
+.orders {
+  background-color: #a2f96f; /* Soft Sky Blue */
+}
+.food {
+  background-color: #ffafcc; /* Muted Rose Pink */
+}
+.tables {
+  background-color: #bde0fe; /* Calm Baby Blue */
+}
+.users {
+  background-color: #ffc8a2; /* Soft Peach */
+}
+.p-orders {
+  background-color: #cdb4db; /* Dusty Lavender */
+}
+.reviews {
+  background-color: #ffdac1; /* Warm Cream */
+}
+
+.hov {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hov:hover {
+  transform: scale(1.03) translateY(-3px);
+}
+
+/* Responsive - Stack on small screens */
+@media (max-width: 768px) {
+  .dashboard-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box {
+    width: 90%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* background-color: #d2d2d2; */
+  background-color: #eeeeee;
+  font-family: "Lexend Deca", serif;
+}
+
+/* ######################################## NAVBAR ############################################ */
+.navbar {
+  background-color: #ffffff; /* White background */
+  color: #000; /* Black text color */
+  height: 70px; /* Set navbar height */
+  display: flex;
+  justify-content: space-between; /* Push items to both ends */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Optional shadow for better visibility */
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.navbar .hamburger {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.navbar .heading {
+  font-weight: 400;
+  font-size: clamp(2.4rem, 2.5vw, 3.6rem);
+  margin: 0;
+}
+
+/* ######################################## SIDEBAR HEADER ############################################ */
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+}
+
+/* Rest of the sidebar remains the same */
+.sidebar ul li {
+  padding: 0;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* ######################################## SIDEBAR ############################################ */
+
+/* Sidebar styling */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+
+.sidebar.open {
+  transform: translateX(250px); /* Slide in */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center all li items */
+  flex-grow: 1;
+}
+
+.sidebar ul li {
+  width: 100%; /* Make li take the full width */
+  display: flex;
+  justify-content: center; /* Horizontally center the content inside li */
+  padding: 15px 0; /* Adjust padding for better alignment */
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.sidebar ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* Hover effect on all li items (underline) */
+.sidebar ul li a:hover {
+  color: rgb(202, 0, 0); /* Change text color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* ######################################## SIDEBAR LOGOUT ############################################ */
+
+/* Ensure the logout button gets the full hover effect */
+/* Logout Button */
+.logout-btn {
+  display: flex;
+  align-items: center; /* Vertically center icon and text */
+  justify-content: center; /* Horizontally center icon and text */
+  padding: 15px 20px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.6rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  right: 10px;
+}
+
+/* Hover effect on the logout button (underline) */
+.logout-btn:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Custom Logout Icon */
+.logout-icon {
+  margin-right: 5px; /* Space between icon and text */
+  width: 30px; /* Adjust icon size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Logout Text Styling */
+.logout-btn #span {
+  font-size: 2rem; /* Same size as the icon */
+  text-decoration: none;
+  color: #000;
+}
+
+/* ######################################## OVERLAY  ############################################ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100; /* Below sidebar */
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}

@@ -1,0 +1,234 @@
+.users {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+hr {
+  margin: auto;
+  border: 1px solid black;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.users-table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-table {
+  width: 90%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* border-radius: 8px; */
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  word-break: break-word; /* Force content to wrap if too long */
+}
+
+.user-table th:nth-child(1) {
+  width: 110px;
+}
+
+.user-table th:nth-child(2) {
+  width: 100px;
+}
+
+.user-table th:nth-child(3) {
+  width: 120px;
+}
+
+.user-table th:nth-child(4) {
+  width: 120px;
+}
+
+.user-table th:nth-child(5) {
+  width: 790px;
+}
+
+.user-table th:nth-child(6) {
+  width: 120px;
+}
+
+.user-table thead {
+  background-color: #8bd9f7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+}
+
+/* ############ delete ############ */
+
+.btn {
+  display: inline-flex; /* Ensures buttons behave like inline elements */
+  justify-content: center; /* Horizontally center the text */
+  align-items: center; /* Vertically center the text */
+  width: 70px;
+  height: 35px;
+  border: 1px solid black;
+  font-family: "Lexend Deca", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.delete {
+  background-color: #fc9486;
+}
+
+.delete:hover {
+  background-color: #f87463;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.delete:active {
+  background-color: #fc9486;
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* ############### MODAL ################## */
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ############### MODAL ################## */
+/* Modal Background */
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Delete Button (Red) */
+.confirm-btn {
+  font-weight: 500;
+  font-family: "Lexend Deca";
+  background-color: #fc9486;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Cancel Button (Green) */
+.cancel-btn {
+  font-family: "Lexend Deca";
+  font-weight: 500;
+  background-color: #56e074;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  transition: all 0.2s ease-in-out;
+}
+
+.confirm-btn:hover {
+  background-color: #f7634f;
+}
+.cancel-btn:hover {
+  background-color: #30ff5d;
+}
+
+/* Hover Effect (Increase Box Shadow) */
+.confirm-btn:hover,
+.cancel-btn:hover {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+/* Active Effect (Transform & Reduce Shadow) */
+.confirm-btn:active,
+.cancel-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+/* On smaller screens, keep 90% width and make sure it fits cleanly */
+@media (max-width: 768px) {
+  .user-table {
+    width: 90%;
+  }
+  .users {
+    font-size: 2rem; /* Slightly smaller heading */
+  }
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .user-table {
+    width: 90%;
+  }
+  .users {
+    font-size: 1.5rem; /* Even smaller heading for very small devices */
+  }
+  .user-table th,
+  .user-table td {
+    padding: 8px;
+    font-size: 12px; /* Keep text readable without shrinking too much */
+  }
+}

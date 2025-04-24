@@ -1,0 +1,142 @@
+/* Import the retro-style font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf")
+    format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #d2d2d2;
+  font-family: "Lexend Deca", serif;
+}
+
+/* ######################################## NAVBAR ############################################ */
+.navbar {
+  background-color: #ffffff; /* White background */
+  color: #000; /* Black text color */
+  height: 70px; /* Set navbar height */
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Optional shadow for better visibility */
+}
+
+.navbar .heading {
+  font-weight: 400;
+  font-size: clamp(2.4rem, 2.5vw, 3.6rem);
+  margin: 0;
+}
+
+/* ########################################## FORM ############################################### */
+.admin-info {
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 1); /* Shadow effect */
+  width: 90%;
+  max-width: 400px; /* Restrict container size */
+  margin: 7rem auto;
+  padding: 30px 10px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%; /* Align labels with the textboxes */
+  max-width: 286px; /* Match input width */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.4rem;
+  width: 286px; /* Fixed width */
+  height: 35px; /* Slightly taller fields */
+  border: 2px solid #000;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  outline: none;
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 1);
+}
+
+input[type="submit"] {
+  font-family: "Lexend Deca", sans-serif;
+  width: 286px; /* Match other input fields */
+  height: 40px;
+  margin: 20px 0px;
+  background-color: #90ee90; /* Light green */
+  color: #000; /* Black text */
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000; /* Button shadow */
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #6de86d;
+  /* background-color: #000000; */
+}
+
+input[type="submit"]:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+small {
+  font-size: 1.3rem;
+}
+
+/* Error msg */
+.error1,
+.error2,
+.error3 {
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
